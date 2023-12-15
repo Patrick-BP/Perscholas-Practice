@@ -6,10 +6,8 @@ Finally, print out the contents of the array.
 
  */
 package com.array.java_Patrice;
-
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class Task11 {
     public static void main(String[] args) {
         Scanner numInput = new Scanner(System.in);
@@ -22,7 +20,6 @@ public class Task11 {
             String str = input.nextLine();
             arr[i] = str;
         }
-
         System.out.println("Your favorite  things are: " + String.join(" " ,arr));
     }
 }

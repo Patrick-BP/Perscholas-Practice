@@ -15,7 +15,5 @@ public class Task7 {
                 System.out.println(arr[i]);
             }
         }
-
-
     }
 }

@@ -7,7 +7,6 @@ and swaps the first element with the middle element without creating a new array
  */
 
 import java.util.Arrays;
-
 public class Task8 {
     public static void main(String[] args) {
         String[] arr = {"a","b","c","d","e"};

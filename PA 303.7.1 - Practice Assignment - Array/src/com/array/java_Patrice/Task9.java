@@ -9,9 +9,7 @@ The biggest number is 13
  */
 
 package com.array.java_Patrice;
-
 import java.util.Arrays;
-
 public class Task9 {
     public static void main(String[] args) {
         int[] numbers = {4,2,9,13,1,0};

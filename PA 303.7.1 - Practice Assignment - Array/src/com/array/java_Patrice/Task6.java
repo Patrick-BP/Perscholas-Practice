@@ -5,9 +5,7 @@ Loop through the array and assign the value of the loop control variable multipl
 
  */
 package com.array.java_Patrice;
-
 import java.util.Arrays;
-
 public class Task6 {
     public static void main(String[] args) {
         int[] arr = new int[5];
