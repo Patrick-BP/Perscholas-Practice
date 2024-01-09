@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Layout from './pages/Layout';
 import Home from './components/Home';
+import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='register' element={<Register/>} /> 
         <Route path='layout' element={<Layout/>} > 
             <Route index element={<Home/>}/>
+            <Route path='singlerecipe' element={<RecipeDetails/>}/>
         
         </Route>
 
