@@ -12,8 +12,8 @@ public class Main {
         System.out.println("Please enter the last name:");
         String lastName = sc.next();
         try{
-            String companyDataLocation = "D:/PERSCHOLAS/practice/Hackathon/miniHackathon1/src/Company.csv";
-            String salesRepDataLocation = "D:/PERSCHOLAS/practice/Hackathon/miniHackathon1/src/SalesReps.csv";
+            String companyDataLocation = "D:\\PERSCHOLAS\\practice\\Perscholas-Practice\\Hackathon\\miniHackathon1\\src\\files\\Company.csv";
+            String salesRepDataLocation = "D:\\PERSCHOLAS\\practice\\Perscholas-Practice\\Hackathon\\miniHackathon1\\src\\files\\SalesReps.csv";
 
             File companyDataFile = new File(companyDataLocation);
             File salesRepDataFile = new File(salesRepDataLocation);
@@ -29,6 +29,7 @@ public class Main {
                 String[] splitedLine = line.split(",");
 
                 Company companyObj = new Company();
+
                 companyObj.setIndex(splitedLine[0]);
                 companyObj.setOrganizationId(splitedLine[1]);
                 companyObj.setSalesRepId(splitedLine[2]);
@@ -47,6 +48,7 @@ public class Main {
                 String[] splitedLine = line.split(",");
 
                 SalesRep salesRepObj = new SalesRep();
+
                 salesRepObj.setUserId(splitedLine[0]);
                 salesRepObj.setFirstName(splitedLine[1]);
                 salesRepObj.setLastName(splitedLine[2]);
@@ -60,7 +62,7 @@ public class Main {
 
                 if(lastName.equals(s.getLastName())){
 
-                    System.out.println(s.getLastName());
+                    System.out.println("Sales Person: " + s.getFirstName() +" "+ s.getLastName());
 
                     for (Company c : companyData){
 

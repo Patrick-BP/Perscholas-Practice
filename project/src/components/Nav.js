@@ -17,15 +17,7 @@ function Nav() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/layout">Recipes</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/layout"><i className="fa fa-play-circle-o"></i> Video Recipes</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/layout">Restaurants</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/layout">Kitchenware</Link>
-                        </li>
+                        
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Logout</Link>
                         </li>  
