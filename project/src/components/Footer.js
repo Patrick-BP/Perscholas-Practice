@@ -9,7 +9,7 @@ function Footer() {
                         <div className="widget">
                             <div className="footer-text text-center">
                                 <a href="#"><img src="images/version/food-logo.png" alt="" className="img-fluid"/></a>
-                                <p>© 2017 RecipeList Pty Ltd. Trademarks and brands are the property<br/>of their respective owners. </p>
+                                <p>© 2024 RecipeBlog.<br/></p>
                                 <div className="social">
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i className="fa fa-facebook"></i></a>              
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i className="fa fa-twitter"></i></a>
@@ -25,7 +25,7 @@ function Footer() {
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <br/>
-                        <div className="copyright">&copy; RecipeList. Design: <a href="http://html.design">HTML Design</a>.</div>
+                        {/* <div className="copyright">&copy; RecipeBlog. Design: <a href="#">Bihizi Patrick</a>.</div> */}
                     </div>
                 </div>
             </div>

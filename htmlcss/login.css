@@ -1,0 +1,54 @@
+.wrap{
+    border: 2px solid gray;
+    padding:15px ;
+    width:300px;
+    margin:20vh auto;
+    position: relative;
+    text-align: center;
+    background-color: #e8e8e8;
+    box-shadow: 0 0 40px gray
+}
+.usericon{
+    width:50px;
+    position:absolute;
+    left:140px;
+    top:-30px
+
+}
+
+form{
+
+}
+input{
+border: none;
+padding:10px;
+background: #d3d3d3;
+font-size:15px;
+font-weight:bold;
+margin-bottom:20px;
+text-align:center;
+width:50%
+}
+h1{
+    font-size:1.3em;
+    font-weight: bold;
+    margin:40px
+}
+button{
+    border:none;
+    background-color:#50c9e6;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 0;
+    width:57%
+}
+a{
+    text-decoration:none;
+    color:#e6a01e;
+    margin:0 0 20px 0;
+    font-weight: bolder;
+}
+.forgot{
+    margin-top: 20px;
+}

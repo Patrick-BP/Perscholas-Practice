@@ -1,14 +1,16 @@
 package org.example;
-import model.Department;
-import model.Teacher;
+import model.Department2;
+import model.Teacher2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
-public class App {
+import java.util.ArrayList;
+import java.util.List;
+public class App2 {
     public static void main(String[] args) {
-        manyToOne();
+
+        oneToMany();
     }
 
     public static void manyToOne(){
@@ -17,14 +19,15 @@ public class App {
         Transaction transaction = session.beginTransaction();
 
         //creating departments
-        Department dept1 = new Department("IT");
-        Department dept2 = new Department("HR");
+        Department2 dept1 = new Department2("IT");
+        Department2 dept2 = new Department2("HR");
 
         //creating teacher
-        Teacher t1 = new Teacher("1000","MHaseeb",dept1);
-        Teacher t2 = new Teacher("2220","Shahparan",dept1);
-        Teacher t3 = new Teacher("3000","James",dept1);
-        Teacher t4 = new Teacher("40000","Joseph",dept2);
+        Teacher2 t1 = new Teacher2("1000","MHaseeb",dept1);
+        Teacher2 t2 = new Teacher2("2220","Shahparan",dept1);
+        Teacher2 t3 = new Teacher2("3000","James",dept1);
+        Teacher2 t4 = new Teacher2("40000","Joseph",dept2);
+
         //Storing Departments in database
         session.persist(dept1);
         session.persist(dept2);
@@ -34,4 +37,37 @@ public class App {
         session.persist(t3);
         session.persist(t4);
         transaction.commit();  }
+
+    public static void oneToMany(){
+        SessionFactory factory = new Configuration().configure().buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction t = session.beginTransaction();
+        //creating teacher
+        Teacher2 t1 = new Teacher2("1000","MHaseeb");
+        Teacher2 t2 = new Teacher2("2220","Shahparan");
+        Teacher2 t3 = new Teacher2("3000","James");
+        Teacher2 t4 = new Teacher2("40000","Joseph");
+        Teacher2 t5 = new Teacher2("200","Ali");
+
+        //Add teacher entity object to the list
+        ArrayList<Teacher2> teachersList = new ArrayList<>();
+        teachersList.add(t1);
+        teachersList.add(t2);
+        teachersList.add(t3);
+        teachersList.add(t4);
+        teachersList.add(t5);
+        session.persist(t1);
+        session.persist(t2);
+        session.persist(t3);
+        session.persist(t4);
+        session.persist(t5);
+        //Creating Department
+        Department2 department = new Department2();
+        department.setDeptName("Development");
+        department.setTeacherList(teachersList);
+        //Storing Department
+        session.persist(department);
+        t.commit();    }
+
+
 }

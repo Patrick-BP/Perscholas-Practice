@@ -1,28 +1,42 @@
 package model;
+
 import jakarta.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
-@Table
-public class Department implements Serializable  {
+@Table(name = "Department")
+public class Department2 implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue( strategy=GenerationType.IDENTITY )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int deptId;
     private String deptName;
 
-    public Department(int deptId, String deptName) {
+    public Department2(int deptId, String deptName) {
         super();
         this.deptId = deptId;
         this.deptName = deptName;
     }
 
-    public Department() {}
+    @OneToMany(targetEntity = Teacher2.class, cascade = {CascadeType.ALL})
+    private List<Teacher2> teacherList;
 
-    public Department(String deptName) {
+    public List<Teacher2> getTeacherList() {
+        return teacherList;
+    }
+
+    public void setTeacherList(List<Teacher2> teacherList) {
+        this.teacherList = teacherList;
+    }
+
+    public Department2() {
+    }
+
+    public Department2(String deptName) {
         this.deptName = deptName;
     }
 
@@ -42,4 +56,3 @@ public class Department implements Serializable  {
         this.deptName = deptName;
     }
 }
-
