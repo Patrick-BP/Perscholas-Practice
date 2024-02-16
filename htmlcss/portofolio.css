@@ -204,6 +204,11 @@ color: #008073 ;
 .thumbnail{
     height: 50px;
 }
+
+.modal-dialog {
+    max-width: 80% !important;
+}    
+
 @media screen and (min-width: 600px) {
     
 }
