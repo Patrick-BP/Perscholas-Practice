@@ -26,7 +26,7 @@
     <form class="mb-5" id="loginform">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>
-        <input type="email" class="form-control" value="Bihizi Patrick" name="email" id="exampleInputEmail1" placeholder="example@gmail.com"  aria-describedby="emailHelp">
+        <input type="text" class="form-control" value="Bihizi Patrick" name="email" id="exampleInputEmail1" placeholder="example@gmail.com"  aria-describedby="emailHelp">
         
       </div>
         <div class="mb-3">
@@ -36,7 +36,13 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" value="123" name="password" placeholder="********" id="exampleInputPassword1">
+          <input type="password" pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}$/" class="form-control" value="1aA" name="password" placeholder="********" id="exampleInputPassword1">
+          <div class="d-flex flex-column">
+            <span class="pass">least 8 characters long</span> 
+            <span class="pass">Contains at least one digit</span>
+            <span class="pass">Contains at least one lowercase letter</span>
+            <span class="pass">Contains at least one uppercase letter</span>
+            </div>
         </div>
         <small class="text-danger text-center " id="message"></small>
        
