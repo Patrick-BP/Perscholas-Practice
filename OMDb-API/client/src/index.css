@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+
+:root{
+  --regal-blue: #034378;
+--san-juan: #2d4e68;
+--bermuda: #77d7b9;
+--white: #fff;
+--black: #000;
+--open-sans: 'Open Sans',
+sans-serif;
+}
+
+
+:root {
+  --regal-blue: #3366ff;
+  --san-juan: #445566;
+  --open-sans: 'Open Sans', sans-serif;
+  --white: #ffffff;
+  --black: 0, 0, 0;
+}
+
+.cf::before,
+.cf::after {
+  content: '';
+  display: table;
+}
+.cf::after {
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, var(--regal-blue), var(--san-juan));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  /* font-family: var(--open-sans); */
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  /* font-family: var(--open-sans); */
+  font-weight: 300;
+}
+
+.row {
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+.card {
+  float: left;
+  width: 297px;
+      border:none !important;
+    border-radius: 0;
+
+}
+
+.menu-content {
+  @include cf;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.menu-content li {
+  display: inline-block;
+}
+.menu-content a {
+  color: var(--white) !important;
+}
+.menu-content span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  transform: translate(-50%, 0);
+}
+
+.wrapper {
+  background-color: var(--white) !important;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(var(--black), 0.3), 0 15px 12px rgba(var(--black), 0.2);
+}
+.wrapper:hover .data {
+  transform: translateY(0);
+}
+
+.data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(70px + 1em));
+  transition: transform 0.3s;
+}
+.data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+  /* background-color:#040000d6 */
+  background-image: linear-gradient(to bottom,  rgb(10 2 2 / 8%), rgb(8 0 0));
+}
+
+.author {
+  font-size: 14px;
+  background-color: #187991;
+  padding: 0px 6px;
+  font-weight: bold;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.text {
+  height: 70px;
+  margin: 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+input[type='checkbox']:checked + .menu-content {
+  transform: translateY(-60px);
+}
+
+// First example styles
+
+
+// Second example styles
+.example-2 .wrapper:hover .menu-content span {
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.example-2{
+  /* width:18% */
+}
+.example-2 .header {
+  color: var(--white);
+  padding: 1em;
+}
+
+.example-2 .header .date {
+  float: left;
+  font-size: 14px;
+  padding: 9px 15px;
+  background-color: #ff8f00;
+  font-weight: bolder;
+  position: relative;
+  top: -17px;
+  left: -10px;
+  text-shadow: 1px 0 #4a4949;
+}
+
+.example-2 .menu-content {
+  float: right;
+}
+
+.example-2 .menu-content li {
+  margin: 0 5px;
+  position: relative;
+}
+
+.example-2 .menu-content span {
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.example-2 .data {
+  color: var(--white);
+  transform: translateY(calc(0px + 4em));
+}
+
+.example-2 .title a {
+  color: var(--white);
+}
+
+.example-2 .button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: var(--white);
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+
+.example-2 .button::after {
+  content: '\2192';
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+
+.example-2 .button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
+}
